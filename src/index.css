@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #f8f9fa;
+  --surface: #ffffff;
+  --text-main: #202124;
+  --text-muted: #5f6368;
+
+  /* Your Custom Palette around #7e5ab5 */
+  --brand-primary: #7e5ab5;
+  --brand-hover: #6c48a3;
+  --brand-tint: #f4f0fb;
+  --brand-border: #e2d9ed;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
