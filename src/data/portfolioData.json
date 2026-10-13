@@ -1,0 +1,70 @@
+{
+    "profile": {
+        "name": "Mahmoud Zughbor",
+        "title": "Full-Stack Web Developer",
+        "tagline": "Building scalable web applications, robust backend architectures, and clean user-focused interfaces with precision.",
+        "location": "Cairo, Egypt",
+        "email": "mzughbor@gmail.com"
+    },
+    "projects": [
+        {
+            "id": 1,
+            "title": "Food Delivery Pro",
+            "category": "Full-Stack Web Application",
+            "description": "A multi-restaurant food delivery web platform with an admin management system dashboard.",
+            "techStack": [
+                "Django",
+                "Bootstrap 5",
+                "PostgreSQL",
+                "Nginx"
+            ],
+            "demoLink": "#",
+            "githubLink": "#"
+        },
+        {
+            "id": 2,
+            "title": "Service Booking Platform",
+            "category": "MERN Stack",
+            "description": "Service booking platform connecting customers with salons and spas across the Kuwait market with multilingual support.",
+            "techStack": [
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB"
+            ],
+            "demoLink": "#",
+            "githubLink": "#"
+        },
+        {
+            "id": 3,
+            "title": "AcademyIK Website",
+            "category": "WordPress & Custom CSS",
+            "description": "Professional responsive website developed for a water solutions client with customized theme architecture.",
+            "techStack": [
+                "WordPress",
+                "PHP",
+                "Custom CSS",
+                "SEO Optimization"
+            ],
+            "demoLink": "https://academyik.com",
+            "githubLink": "#"
+        }
+    ],
+    "services": [
+        {
+            "id": 1,
+            "title": "Full-Stack Development",
+            "description": "Building robust web apps using React, Node, Django, and modern backend architectures."
+        },
+        {
+            "id": 2,
+            "title": "REST API & Headless CMS",
+            "description": "Developing secure APIs, authentication flows, and headless content management systems."
+        },
+        {
+            "id": 3,
+            "title": "Server & Deployment",
+            "description": "Managing Linux server environments, Nginx configurations, SSL certs, and deployment workflows."
+        }
+    ]
+}
