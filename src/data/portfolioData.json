@@ -1,70 +1,245 @@
 {
     "profile": {
         "name": "Mahmoud Zughbor",
-        "title": "Full-Stack Web Developer",
-        "tagline": "Building scalable web applications, robust backend architectures, and clean user-focused interfaces with precision.",
+        "handle": "mzughbor",
+        "title": "Full-Stack Software Engineer",
+        "tagline": "Building reliable web products across React, Next.js, Django, and Node.js, from application architecture and APIs through production deployment.",
         "location": "Cairo, Egypt",
-        "email": "mzughbor@gmail.com"
+        "email": "mzughbor@gmail.com",
+        "phone": "+20 101 467 4522",
+        "image": "/mzughbor/1780391330359.jpg",
+        "resume": "/mzughbor/Updated-mzughbor-Resume.docx.pdf",
+        "linkedin": "https://www.linkedin.com/in/mzughbor",
+        "github": "https://github.com/mzughbor"
     },
+    "skills": [
+        {
+            "category": "Languages",
+            "items": [
+                "JavaScript (ES6+)",
+                "Python",
+                "PHP",
+                "HTML5",
+                "CSS3"
+            ]
+        },
+        {
+            "category": "Frontend",
+            "items": [
+                "React",
+                "Next.js",
+                "Tailwind CSS",
+                "Bootstrap",
+                "jQuery"
+            ]
+        },
+        {
+            "category": "Backend",
+            "items": [
+                "Node.js",
+                "Express.js",
+                "Django",
+                "Flask",
+                "WordPress",
+                "REST APIs"
+            ]
+        },
+        {
+            "category": "Databases",
+            "items": [
+                "PostgreSQL",
+                "MongoDB",
+                "MySQL",
+                "SQLite"
+            ]
+        },
+        {
+            "category": "DevOps & Tools",
+            "items": [
+                "Git",
+                "GitHub",
+                "Linux / Ubuntu",
+                "Nginx",
+                "Gunicorn",
+                "AWS",
+                "Postman",
+                "CI/CD"
+            ]
+        },
+        {
+            "category": "Core Competencies",
+            "items": [
+                "Full-stack delivery",
+                "REST API design",
+                "Database modeling",
+                "Performance optimization",
+                "Multilingual interfaces",
+                "Production deployment"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "role": "Full Stack Developer",
+            "company": "Falcon of Codes",
+            "url": "https://falconofcodes.com/",
+            "location": "Cairo, Egypt",
+            "period": "December 2025 - Present",
+            "details": [
+                "Develop and maintain Next.js and React applications, translating product and client requirements into polished user experiences.",
+                "Build Django application features and REST APIs that support reliable data flow across client projects.",
+                "Manage Linux servers and configure deployment pipelines for new websites and production releases."
+            ]
+        },
+        {
+            "role": "Web Developer and WordPress Developer",
+            "company": "Freelance",
+            "location": "Remote",
+            "period": "December 2021 - October 2025",
+            "details": [
+                "Delivered full-stack Django applications and custom WordPress solutions for clients, taking work from requirements through launch and support.",
+                "Built custom themes and plugins, integrated external APIs, and improved backend data flows using PHP and Python-based tools.",
+                "Configured and maintained Linux hosting, domains, Nginx reverse proxies, and SSL while providing ongoing client support."
+            ]
+        }
+    ],
     "projects": [
         {
-            "id": 1,
+            "id": "food-delivery-pro",
+            "slug": "food-delivery-pro",
+            "detailPath": "projects/food-delivery-pro/",
             "title": "Food Delivery Pro",
-            "category": "Full-Stack Web Application",
-            "description": "A multi-restaurant food delivery web platform with an admin management system dashboard.",
+            "category": "Full-stack ordering platform",
+            "description": "A multi-restaurant Django platform for meal management, customer ordering, restaurant operations, and delivery workflows.",
             "techStack": [
-                "Django",
+                "Django 5.2",
+                "Python 3.12",
                 "Bootstrap 5",
-                "PostgreSQL",
-                "Nginx"
+                "JavaScript / AJAX",
+                "SQL database",
+                "Nginx / Gunicorn"
             ],
-            "demoLink": "#",
-            "githubLink": "#"
+            "demoLink": "https://food-delivery-pro.onrender.com/",
+            "repositoryLink": "https://github.com/mzughbor/Food-Ordering-Platform",
+            "originalConceptLink": "https://mzughbor.github.io/recovery-p-c01-s08-omnifood-project-responsive-version/index.html",
+            "caseStudy": {
+                "title": "Food Ordering Platform",
+                "headline": "A responsive concept, developed into a complete ordering and delivery system.",
+                "summary": "A multi-restaurant Django application connecting customers, restaurant teams, delivery staff, and administrators through a shared order workflow.",
+                "overview": "The project began as a responsive food landing-page concept and grew into a full-stack application. The system supports restaurant discovery, meal management, cart and checkout, order tracking, delivery operations, and platform administration.",
+                "role": "Full-stack development",
+                "year": "2025",
+                "challenge": "Each role needs a clear view of the same order while only controlling the actions they are responsible for. The workflow must move cleanly from customer checkout to restaurant preparation and final delivery.",
+                "approach": "Built role-specific experiences around a shared order lifecycle, connected the responsive interface to Django-backed data, and added access checks so restaurant owners can only manage their own restaurant operations.",
+                "features": [
+                    "Role-based experiences for customers, restaurant owners, delivery staff, and administrators",
+                    "Restaurant and meal management with responsive browsing and cart workflows",
+                    "Order status progression from pending through preparation, pickup, transit, and delivery",
+                    "Polling-based order refresh and notifications for active delivery workflows",
+                    "Administrative dashboards with platform, user, order, and restaurant analytics",
+                    "Permission checks that scope owner access to their own restaurant data"
+                ],
+                "workflow": [
+                    {
+                        "step": "01",
+                        "title": "Customer",
+                        "description": "Browse restaurants and meals, add items to the cart, place an order, and follow its status."
+                    },
+                    {
+                        "step": "02",
+                        "title": "Restaurant",
+                        "description": "Review incoming orders, confirm them, prepare meals, and mark them ready for pickup."
+                    },
+                    {
+                        "step": "03",
+                        "title": "Delivery",
+                        "description": "Accept ready orders and update delivery progress through pickup, transit, and completion."
+                    },
+                    {
+                        "step": "04",
+                        "title": "Admin",
+                        "description": "Oversee users, restaurants, orders, platform settings, and operational analytics."
+                    }
+                ],
+                "screenshots": [
+                    {
+                        "src": "food-del-pro/Screenshot-from-2025-10-27-21-52-51.png",
+                        "alt": "Food Ordering Platform delivery dashboard with order status summaries",
+                        "caption": "Delivery dashboard and order status overview"
+                    },
+                    {
+                        "src": "food-del-pro/Screenshot-from-2025-10-27-21-50-12.png",
+                        "alt": "Restaurant administration list with status and management actions",
+                        "caption": "Restaurant administration"
+                    },
+                    {
+                        "src": "food-del-pro/Screenshot-from-2025-10-27-21-50-17.png",
+                        "alt": "Platform settings with site, contact, pricing, and feature controls",
+                        "caption": "Platform settings"
+                    },
+                    {
+                        "src": "food-del-pro/Screenshot-from-2025-10-27-21-55-25.png",
+                        "alt": "Restaurant meal management table with search and availability controls",
+                        "caption": "Restaurant meal management"
+                    },
+                    {
+                        "src": "food-del-pro/Screenshot-from-2025-10-27-21-56-21.png",
+                        "alt": "Restaurant order history with statuses and order actions",
+                        "caption": "Restaurant order workflow"
+                    },
+                    {
+                        "src": "food-del-pro/Screenshot-from-2025-10-27-21-55-31.png",
+                        "alt": "Order details view with customer, status, and item information",
+                        "caption": "Order details"
+                    },
+                    {
+                        "src": "food-del-pro/Screenshot-from-2025-10-27-21-53-28.png",
+                        "alt": "Delivery profile and assigned delivery orders",
+                        "caption": "Delivery profile and assigned orders"
+                    }
+                ]
+            }
         },
         {
-            "id": 2,
-            "title": "Service Booking Platform",
-            "category": "MERN Stack",
-            "description": "Service booking platform connecting customers with salons and spas across the Kuwait market with multilingual support.",
+            "id": "e7jzly",
+            "title": "E7jzly Service Booking Platform",
+            "category": "MERN platform | 2025 - Present",
+            "description": "Contributed to a MERN booking platform for salons and spas in Kuwait, improving React experiences for vendor and customer booking workflows. Worked with the original developer on API-connected features and Arabic / English localization.",
             "techStack": [
+                "MongoDB",
+                "Express",
                 "React",
                 "Node.js",
-                "Express",
-                "MongoDB"
+                "Arabic / English"
             ],
-            "demoLink": "#",
-            "githubLink": "#"
+            "demoLink": "https://www.e7jzly.com/"
         },
         {
-            "id": 3,
+            "id": "academyik",
             "title": "AcademyIK Website",
-            "category": "WordPress & Custom CSS",
-            "description": "Professional responsive website developed for a water solutions client with customized theme architecture.",
+            "category": "WordPress website",
+            "description": "Built a responsive client website for a water solutions company, adapting the theme with custom CSS and adding contact forms, semantic markup, and performance-focused styling.",
             "techStack": [
                 "WordPress",
                 "PHP",
                 "Custom CSS",
-                "SEO Optimization"
+                "Technical SEO"
             ],
-            "demoLink": "https://academyik.com",
-            "githubLink": "#"
+            "demoLink": "https://academyik.com/"
         }
     ],
-    "services": [
+    "education": [
         {
-            "id": 1,
-            "title": "Full-Stack Development",
-            "description": "Building robust web apps using React, Node, Django, and modern backend architectures."
+            "institution": "Axsos Academy",
+            "qualification": "Full-Stack Developer Certificate",
+            "location": "Ramallah, Palestine",
+            "period": "2025"
         },
         {
-            "id": 2,
-            "title": "REST API & Headless CMS",
-            "description": "Developing secure APIs, authentication flows, and headless content management systems."
-        },
-        {
-            "id": 3,
-            "title": "Server & Deployment",
-            "description": "Managing Linux server environments, Nginx configurations, SSL certs, and deployment workflows."
+            "institution": "Islamic University of Gaza",
+            "qualification": "B.A. Multimedia and Web Development",
+            "location": "Gaza, Palestine",
+            "period": "2017 - 2022"
         }
     ]
 }

@@ -1,43 +1,77 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react'
+import AnimatedLogo from './AnimatedLogo'
 
-export default function Navbar() {
-    const [activeTab, setActiveTab] = useState('Home');
-    const navItems = ['Home', 'About', 'Services', 'Resume', 'Projects', 'Contact'];
+export default function Navbar({ homePath = '' }) {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+    const navItems = [
+        ['Home', 'home'],
+        ['About', 'about'],
+        ['Skills', 'services'],
+        ['Resume', 'resume'],
+        ['Projects', 'projects'],
+        ['Contact', 'contact'],
+    ];
+
+    useEffect(() => {
+        const updateScrollState = () => setIsScrolled(window.scrollY > 12)
+        updateScrollState()
+        window.addEventListener('scroll', updateScrollState, { passive: true })
+        return () => window.removeEventListener('scroll', updateScrollState)
+    }, [])
 
     return (
-        <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
-            <div className="bg-white/90 backdrop-blur-md border border-[#dadce0] rounded-full px-6 py-2.5 flex items-center justify-between shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
+        <nav
+            aria-label="Main navigation"
+            onKeyDown={(event) => {
+                if (event.key === 'Escape') setIsMenuOpen(false)
+            }}
+            className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${isScrolled ? 'bg-white/95 shadow-[0_1px_8px_rgba(60,64,67,0.12)] backdrop-blur-md' : 'bg-[var(--palette-salmon-soft)]/90'}`}
+        >
+            <div className="relative mx-auto flex max-w-7xl items-center gap-4 px-4 py-2.5 sm:px-6 md:px-8">
+                <button
+                    type="button"
+                    aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                    aria-expanded={isMenuOpen}
+                    aria-controls="mobile-navigation"
+                    onClick={() => setIsMenuOpen((open) => !open)}
+                    className="inline-flex size-11 shrink-0 flex-col items-center justify-center gap-[5px] rounded-full text-[#5f6368] transition-colors hover:bg-[var(--palette-salmon-soft)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--palette-salmon)] md:hidden"
+                >
+                    <span className="h-0.5 w-[18px] rounded-full bg-current" />
+                    <span className="h-0.5 w-[18px] rounded-full bg-current" />
+                    <span className="h-0.5 w-[18px] rounded-full bg-current" />
+                </button>
 
-                {/* Logo */}
-                <div className="flex items-center gap-2">
-                    <a href="#" className="flex items-center gap-2">
-                        <img 
-                            src={`${import.meta.env.BASE_URL}white-original-mzughbor.gif`}
-                            alt="Mahmoud Logo" 
-                            className="h-8 w-auto object-contain" 
-                        />
-                    </a>
-                </div>
+                <a href={`${homePath}#home`} aria-label="Mahmoud Zughbor home" className="block h-8 w-[116px] shrink-0">
+                    <AnimatedLogo />
+                </a>
 
-                {/* Links */}
-                <ul className="flex items-center gap-1 sm:gap-2">
-                    {navItems.map((item) => (
-                        <li key={item}>
-                            <button
-                                onClick={() => setActiveTab(item)}
-                                className={`px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-all duration-200 ${
-                                    activeTab === item
-                                        ? 'bg-[#7e5ab5] text-white font-semibold shadow-sm'
-                                        : 'text-[#5f6368] hover:text-[#202124] hover:bg-gray-100'
-                                }`}
-                            >
-                                {item}
-                            </button>
+                <ul className="ml-auto hidden items-center gap-1 md:flex">
+                    {navItems.map(([label, target]) => (
+                        <li key={target} className="shrink-0">
+                            <a href={`${homePath}#${target}`} className="block whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-[#5f6368] transition-colors hover:bg-[var(--palette-salmon-soft)] hover:text-[#202124]">
+                                {label}
+                            </a>
                         </li>
                     ))}
                 </ul>
-
             </div>
+
+            {isMenuOpen && (
+                <ul id="mobile-navigation" className="absolute left-4 right-4 top-full grid gap-1 rounded-2xl bg-white p-2 shadow-[0_8px_28px_rgba(60,64,67,0.18)] md:hidden">
+                    {navItems.map(([label, target]) => (
+                        <li key={target}>
+                            <a
+                                href={`${homePath}#${target}`}
+                                onClick={() => setIsMenuOpen(false)}
+                                className="block rounded-xl px-4 py-3 text-base font-medium text-[#3c4043] transition-colors hover:bg-[var(--palette-salmon-soft)] focus-visible:outline-2 focus-visible:outline-[var(--palette-salmon)]"
+                            >
+                                {label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            )}
         </nav>
     );
 }

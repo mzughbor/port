@@ -1,24 +1,81 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
 :root {
-  --bg-main: #f8f9fa;
+  --bg-main: #ffffff;
   --surface: #ffffff;
   --text-main: #202124;
   --text-muted: #5f6368;
-
-  /* Your Custom Palette around #7e5ab5 */
-  --brand-primary: #7e5ab5;
-  --brand-hover: #6c48a3;
-  --brand-tint: #f4f0fb;
-  --brand-border: #e2d9ed;
+  --palette-salmon-soft: #fef4f2;
+  --palette-green-soft: #a8fa72;
+  --palette-cyan-soft: #72ecfa;
+  --palette-violet-soft: #f2e4fe;
+  --palette-gray-soft: #edeff0;
+  --palette-salmon-mid: #fcbeb5;
+  --palette-green-mid: #83d14b;
+  --palette-cyan-mid: #40c5d3;
+  --palette-violet-mid: #daaefc;
+  --palette-gray-mid: #c2c9cc;
+  --palette-salmon: #fa8072;
+  --palette-green: #68a73b;
+  --palette-cyan: #319ca7;
+  --palette-violet: #c472fa;
+  --palette-gray: #9ba3a8;
+  --site-dark: #202124;
+  --site-dark-surface: #303134;
+  --site-muted-on-dark: #c2c9cc;
+  --site-line-on-dark: #5f6368;
+  --food-green: var(--palette-green);
+  --food-green-dark: #467b25;
+  --food-green-light: var(--palette-green-soft);
+  --food-orange: var(--palette-salmon);
+  --food-orange-light: var(--palette-salmon-soft);
+  --food-ink: #202124;
+  --food-muted: #5f6368;
+  --food-line: #dadce0;
+  --food-canvas: var(--palette-gray-soft);
 }
 
 body {
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family:
-    "Inter",
+    "DM Sans",
     system-ui,
     -apple-system,
     sans-serif;
+}
+
+.name-color-cycle {
+  animation: name-color-cycle 12s ease-in-out infinite;
+}
+
+@keyframes name-color-cycle {
+  0%,
+  100% {
+    color: var(--palette-salmon);
+  }
+
+  33% {
+    color: var(--palette-green);
+  }
+
+  66% {
+    color: var(--palette-cyan);
+  }
+
+  85% {
+    color: var(--palette-violet);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name-color-cycle {
+    animation: none;
+    color: var(--palette-salmon);
+  }
 }
