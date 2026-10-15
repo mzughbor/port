@@ -26,7 +26,7 @@ export default function Navbar({ homePath = '' }) {
             onKeyDown={(event) => {
                 if (event.key === 'Escape') setIsMenuOpen(false)
             }}
-            className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${isScrolled ? 'bg-white/95 shadow-[0_1px_8px_rgba(60,64,67,0.12)] backdrop-blur-md' : 'bg-[var(--palette-salmon-soft)]/90'}`}
+            className={`fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300 ${isScrolled ? 'shadow-[0_1px_8px_rgba(60,64,67,0.12)]' : ''}`}
         >
             <div className="relative mx-auto flex max-w-7xl items-center gap-4 px-4 py-2.5 sm:px-6 md:px-8">
                 <button
