@@ -76,7 +76,7 @@ export default function Hero() {
                 alt=""
                 aria-hidden="true"
                 fetchPriority="high"
-                className="absolute inset-0 h-full w-full object-cover object-left sm:object-center"
+                className="absolute inset-0 h-full w-full object-cover object-bottom sm:object-bottom"
             />
             <div aria-hidden="true" className="absolute inset-0 bg-black/70" />
 
