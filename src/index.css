@@ -10,18 +10,18 @@ html {
   --surface: #ffffff;
   --text-main: #202124;
   --text-muted: #5f6368;
-  --palette-salmon-soft: #fef4f2;
-  --palette-green-soft: #a8fa72;
+  --palette-javascript-color-logo: #edbef261;
+  --palette-movy-soft: #a8fa72;
   --palette-cyan-soft: #72ecfa;
   --palette-violet-soft: #f2e4fe;
   --palette-gray-soft: #edeff0;
   --palette-salmon-mid: #fcbeb5;
-  --palette-green-mid: #83d14b;
+  --palette-movy-mid: #83d14b;
   --palette-cyan-mid: #40c5d3;
   --palette-violet-mid: #daaefc;
   --palette-gray-mid: #c2c9cc;
   --palette-salmon: #fa8072;
-  --palette-green: #68a73b;
+  --palette-movy: #8d2de7;
   --palette-cyan: #319ca7;
   --palette-violet: #c472fa;
   --palette-gray: #9ba3a8;
@@ -29,11 +29,11 @@ html {
   --site-dark-surface: #303134;
   --site-muted-on-dark: #c2c9cc;
   --site-line-on-dark: #5f6368;
-  --food-green: var(--palette-green);
+  --food-green: var(--palette-movy);
   --food-green-dark: #467b25;
-  --food-green-light: var(--palette-green-soft);
+  --food-green-light: var(--palette-movy-soft);
   --food-orange: var(--palette-salmon);
-  --food-orange-light: var(--palette-salmon-soft);
+  --food-orange-light: var(--palette-javascript-color-logo);
   --food-ink: #202124;
   --food-muted: #5f6368;
   --food-line: #dadce0;
@@ -50,18 +50,24 @@ body {
     sans-serif;
 }
 
+h1,
+h2 {
+  font-family: "Redaction 50", serif;
+}
+
 .name-color-cycle {
   animation: name-color-cycle 12s ease-in-out infinite;
 }
 
 @keyframes name-color-cycle {
+
   0%,
   100% {
     color: var(--palette-salmon);
   }
 
   33% {
-    color: var(--palette-green);
+    color: var(--palette-movy);
   }
 
   66% {

@@ -1,5 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
+import '@fontsource/redaction-50/400.css'
+import '@fontsource/redaction-50/700.css'
 import './index.css'
 import App from './App.jsx'
 

@@ -35,7 +35,7 @@ export default function Navbar({ homePath = '' }) {
                     aria-expanded={isMenuOpen}
                     aria-controls="mobile-navigation"
                     onClick={() => setIsMenuOpen((open) => !open)}
-                    className="inline-flex size-11 shrink-0 flex-col items-center justify-center gap-[5px] rounded-full text-[#5f6368] transition-colors hover:bg-[var(--palette-salmon-soft)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--palette-salmon)] md:hidden"
+                    className="inline-flex size-11 shrink-0 flex-col items-center justify-center gap-[5px] rounded-full text-[#5f6368] transition-colors hover:bg-[var(--palette-javascript-color-logo)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--palette-salmon)] md:hidden"
                 >
                     <span className="h-0.5 w-[18px] rounded-full bg-current" />
                     <span className="h-0.5 w-[18px] rounded-full bg-current" />
@@ -49,7 +49,7 @@ export default function Navbar({ homePath = '' }) {
                 <ul className="ml-auto hidden items-center gap-1 md:flex">
                     {navItems.map(([label, target]) => (
                         <li key={target} className="shrink-0">
-                            <a href={`${homePath}#${target}`} className="block whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-[#5f6368] transition-colors hover:bg-[var(--palette-salmon-soft)] hover:text-[#202124]">
+                            <a href={`${homePath}#${target}`} className="block whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-[#5f6368] transition-colors hover:bg-[var(--palette-javascript-color-logo)] hover:text-[#202124]">
                                 {label}
                             </a>
                         </li>
@@ -64,7 +64,7 @@ export default function Navbar({ homePath = '' }) {
                             <a
                                 href={`${homePath}#${target}`}
                                 onClick={() => setIsMenuOpen(false)}
-                                className="block rounded-xl px-4 py-3 text-base font-medium text-[#3c4043] transition-colors hover:bg-[var(--palette-salmon-soft)] focus-visible:outline-2 focus-visible:outline-[var(--palette-salmon)]"
+                                className="block rounded-xl px-4 py-3 text-base font-medium text-[#3c4043] transition-colors hover:bg-[var(--palette-javascript-color-logo)] focus-visible:outline-2 focus-visible:outline-[var(--palette-salmon)]"
                             >
                                 {label}
                             </a>

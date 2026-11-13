@@ -6,7 +6,7 @@ import portfolio from './data/portfolioData.json';
 const { profile, skills, experience, projects, education } = portfolio;
 const skillAccentClasses = [
   'text-[var(--palette-salmon-mid)]',
-  'text-[var(--palette-green-mid)]',
+  'text-[var(--palette-movy-mid)]',
   'text-[var(--palette-cyan-mid)]',
   'text-[var(--palette-violet-mid)]',
   'text-[var(--palette-gray-mid)]',
@@ -23,7 +23,7 @@ export default function App({ projectSlug }) {
         <Navbar homePath={import.meta.env.BASE_URL} />
         <main className="mx-auto max-w-3xl">
           <h1 className="text-3xl font-semibold">Project not found</h1>
-          <a href={`${import.meta.env.BASE_URL}#projects`} className="mt-4 inline-block text-[var(--palette-green)] underline underline-offset-4">Return to projects</a>
+          <a href={`${import.meta.env.BASE_URL}#projects`} className="mt-4 inline-block text-[var(--palette-movy)] underline underline-offset-4">Return to projects</a>
         </main>
       </div>
     );
@@ -57,7 +57,7 @@ export default function App({ projectSlug }) {
               </p>
               <div className="flex flex-wrap gap-4 pt-2 text-sm font-semibold">
                 <a href={profile.linkedin} target="_blank" rel="noreferrer" className="text-[#202124] underline decoration-[var(--palette-salmon)] underline-offset-4">LinkedIn</a>
-                <a href={profile.github} target="_blank" rel="noreferrer" className="text-[#202124] underline decoration-[var(--palette-green)] underline-offset-4">GitHub</a>
+                <a href={profile.github} target="_blank" rel="noreferrer" className="text-[#202124] underline decoration-[var(--palette-movy)] underline-offset-4">GitHub</a>
                 <a href={`${import.meta.env.BASE_URL}mzughbor/Updated-mzughbor-Resume.docx.pdf`} download="Mahmoud-Zughbor-Resume.pdf" className="text-[#202124] underline decoration-[var(--palette-violet)] underline-offset-4">Download resume</a>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function App({ projectSlug }) {
 
         <section id="services" className="scroll-mt-28 bg-[var(--site-dark)] px-6 py-20 text-white sm:py-24">
           <div className="mx-auto max-w-6xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[var(--palette-green-mid)]">Capabilities</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-[var(--palette-movy-mid)]">Capabilities</p>
             <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">From product UI to production server</h2>
             <p className="mt-4 max-w-2xl leading-7 text-[var(--site-muted-on-dark)]">
               A practical toolkit for building product interfaces, backend services, and production systems.
@@ -86,10 +86,10 @@ export default function App({ projectSlug }) {
           </div>
         </section>
 
-        <section id="resume" className="scroll-mt-28 bg-[var(--palette-salmon-soft)] px-6 py-20 sm:py-24">
+        <section id="resume" className="scroll-mt-28 bg-[var(--palette-javascript-color-logo)] px-6 py-20 sm:py-24">
           <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[1.2fr_0.8fr]">
             <div>
-                  <p className="text-sm font-semibold uppercase tracking-wide text-[var(--palette-green)]">Experience</p>
+                  <p className="text-sm font-semibold uppercase tracking-wide text-[var(--palette-movy)]">Experience</p>
               <h2 className="mt-3 text-3xl font-bold text-[#202124] sm:text-4xl">Work history</h2>
               <div className="mt-8">
                 {experience.map((job) => (
@@ -98,7 +98,7 @@ export default function App({ projectSlug }) {
                       <h3 className="text-lg font-semibold text-[#202124]">{job.role}</h3>
                       <p className="text-sm text-[#5f6368]">{job.period}</p>
                     </div>
-                    <p className="mt-1 text-sm font-medium text-[var(--palette-green)]">
+                    <p className="mt-1 text-sm font-medium text-[var(--palette-movy)]">
                       {job.url ? <a href={job.url} target="_blank" rel="noreferrer">{job.company}</a> : job.company}
                       <span className="font-normal text-[#5f6368]"> · {job.location}</span>
                     </p>
@@ -145,7 +145,7 @@ export default function App({ projectSlug }) {
                     Visit project <span className="sr-only">{project.title}</span>
                   </a>
                   {project.detailPath && (
-                    <a href={`${import.meta.env.BASE_URL}${project.detailPath}`} className="mt-3 inline-flex text-sm font-semibold text-[var(--palette-green)] underline decoration-[var(--palette-salmon)] underline-offset-4">
+                    <a href={`${import.meta.env.BASE_URL}${project.detailPath}`} className="mt-3 inline-flex text-sm font-semibold text-[var(--palette-movy)] underline decoration-[var(--palette-salmon)] underline-offset-4">
                       Read case study <span className="sr-only">for {project.title}</span>
                     </a>
                   )}
@@ -163,7 +163,7 @@ export default function App({ projectSlug }) {
               <p className="mt-3 text-[var(--site-muted-on-dark)]">Available for web development opportunities and collaborations.</p>
             </div>
             <div className="flex flex-col items-start gap-3 text-sm">
-              <a className="font-semibold text-[var(--palette-green-mid)] underline underline-offset-4" href={`mailto:${profile.email}`}>{profile.email}</a>
+              <a className="font-semibold text-[var(--palette-movy-mid)] underline underline-offset-4" href={`mailto:${profile.email}`}>{profile.email}</a>
               <a className="text-[var(--palette-cyan-mid)] underline underline-offset-4" href={`tel:${profile.phone.replaceAll(' ', '')}`}>{profile.phone}</a>
               <p className="text-[var(--site-muted-on-dark)]">{profile.location}</p>
             </div>
