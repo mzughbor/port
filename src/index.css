@@ -29,9 +29,9 @@ html {
   --site-dark-surface: #303134;
   --site-muted-on-dark: #c2c9cc;
   --site-line-on-dark: #5f6368;
-  --food-green: var(--palette-movy);
-  --food-green-dark: #467b25;
-  --food-green-light: var(--palette-movy-soft);
+  --sexy-catchy-color: var(--palette-movy);
+  --sexy-catchy-color: #f12630;
+  --sexy-catchy-color-light: var(--palette-movy-soft);
   --food-orange: var(--palette-salmon);
   --food-orange-light: var(--palette-javascript-color-logo);
   --food-ink: #202124;

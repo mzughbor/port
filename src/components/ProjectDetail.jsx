@@ -11,12 +11,12 @@ export default function ProjectDetail({ project }) {
             <main className="pt-16">
                 <section className="px-5 pb-12 pt-10 sm:px-8 sm:pb-16 sm:pt-14 lg:px-12">
                     <div className="mx-auto max-w-7xl">
-                        <a href={`${baseUrl}#projects`} className="inline-flex items-center gap-2 text-sm font-medium text-[var(--food-muted)] transition-colors hover:text-[var(--food-green)]">
+                        <a href={`${baseUrl}#projects`} className="inline-flex items-center gap-2 text-sm font-medium text-[var(--food-muted)] transition-colors hover:text-[var(--sexy-catchy-color)]">
                             <span aria-hidden="true">←</span> All projects
                         </a>
                         <div className="mt-8 grid items-end gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
                             <div className="max-w-2xl">
-                                <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[var(--food-green)]">
+                                <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[var(--sexy-catchy-color)]">
                                     <span className="size-2 rounded-full bg-[var(--food-orange)]" />
                                     Case study · {detail.year}
                                 </p>
@@ -27,10 +27,10 @@ export default function ProjectDetail({ project }) {
                                     {detail.headline}
                                 </p>
                                 <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                                    <a href={project.demoLink} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--food-green)] px-6 text-sm font-semibold text-white transition-colors hover:bg-[var(--food-green-dark)]">
+                                    <a href={project.demoLink} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--sexy-catchy-color)] px-6 text-sm font-semibold text-white transition-colors hover:bg-[var(--sexy-catchy-color-dark)]">
                                         Open live demo <span className="ml-2" aria-hidden="true">↗</span>
                                     </a>
-                                    <a href={project.repositoryLink} target="_blank" rel="noreferrer" className="text-sm font-semibold text-[var(--food-ink)] underline decoration-[var(--food-orange)] decoration-2 underline-offset-4 hover:text-[var(--food-green)]">
+                                    <a href={project.repositoryLink} target="_blank" rel="noreferrer" className="text-sm font-semibold text-[var(--food-ink)] underline decoration-[var(--food-orange)] decoration-2 underline-offset-4 hover:text-[var(--sexy-catchy-color)]">
                                         View source code <span aria-hidden="true">↗</span>
                                     </a>
                                 </div>
@@ -63,7 +63,7 @@ export default function ProjectDetail({ project }) {
                             <p>{detail.overview}</p>
                             {project.originalConceptLink && (
                                 <p>
-                                    The starting point was a responsive <a href={project.originalConceptLink} target="_blank" rel="noreferrer" className="font-medium text-[var(--food-green)] underline decoration-[var(--food-orange)] underline-offset-4">OmniFood-inspired frontend concept</a>; this project extended it into a data-backed platform.
+                                    The starting point was a responsive <a href={project.originalConceptLink} target="_blank" rel="noreferrer" className="font-medium text-[var(--sexy-catchy-color)] underline decoration-[var(--food-orange)] underline-offset-4">OmniFood-inspired frontend concept</a>; this project extended it into a data-backed platform.
                                 </p>
                             )}
                         </div>
@@ -87,7 +87,7 @@ export default function ProjectDetail({ project }) {
                 <section className="px-5 py-14 sm:px-8 sm:py-20 lg:px-12">
                     <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.7fr_1.3fr] md:gap-20">
                         <div>
-                            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--food-green)]">The problem</p>
+                            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--sexy-catchy-color)]">The problem</p>
                             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">One order, several teams</h2>
                         </div>
                         <div className="space-y-5 text-base leading-7 text-[var(--food-muted)] sm:text-lg sm:leading-8">
@@ -97,13 +97,13 @@ export default function ProjectDetail({ project }) {
                     </div>
                 </section>
 
-                <section className="bg-[var(--food-green-light)] px-5 py-14 sm:px-8 sm:py-20 lg:px-12">
+                <section className="bg-[var(--sexy-catchy-color-light)] px-5 py-14 sm:px-8 sm:py-20 lg:px-12">
                     <div className="mx-auto max-w-7xl">
-                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--food-green)]">How it works</p>
+                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--sexy-catchy-color)]">How it works</p>
                         <h2 className="mt-3 max-w-2xl text-3xl font-semibold sm:text-4xl">A clear handoff at every step</h2>
                         <ol className="mt-10 grid gap-0 sm:grid-cols-2 lg:grid-cols-4">
                             {detail.workflow.map((stage, index) => (
-                                <li key={stage.step} className={`border-t-2 ${index === 1 ? 'border-[var(--food-orange)]' : 'border-[var(--food-green)]'} py-5 sm:pr-6 lg:min-h-52`}>
+                                <li key={stage.step} className={`border-t-2 ${index === 1 ? 'border-[var(--food-orange)]' : 'border-[var(--sexy-catchy-color)]'} py-5 sm:pr-6 lg:min-h-52`}>
                                     <p className="text-xs font-bold text-[var(--food-muted)]">{stage.step}</p>
                                     <h3 className="mt-4 text-xl font-semibold">{stage.title}</h3>
                                     <p className="mt-2 text-sm leading-6 text-[var(--food-muted)]">{stage.description}</p>
@@ -122,7 +122,7 @@ export default function ProjectDetail({ project }) {
                         <ul className="divide-y divide-[var(--food-line)] border-y border-[var(--food-line)]">
                             {detail.features.map((feature, index) => (
                                 <li key={feature} className="grid grid-cols-[2.5rem_1fr] gap-3 py-4 text-sm leading-6 text-[var(--food-muted)] sm:text-base">
-                                    <span className={`font-semibold ${index % 2 === 0 ? 'text-[var(--food-green)]' : 'text-[var(--food-orange)]'}`}>{String(index + 1).padStart(2, '0')}</span>
+                                    <span className={`font-semibold ${index % 2 === 0 ? 'text-[var(--sexy-catchy-color)]' : 'text-[var(--food-orange)]'}`}>{String(index + 1).padStart(2, '0')}</span>
                                     <span>{feature}</span>
                                 </li>
                             ))}
@@ -132,7 +132,7 @@ export default function ProjectDetail({ project }) {
 
                 <section className="px-5 py-14 sm:px-8 sm:py-20 lg:px-12">
                     <div className="mx-auto max-w-7xl">
-                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--food-green)]">Interface snapshots</p>
+                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--sexy-catchy-color)]">Interface snapshots</p>
                         <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">The platform in use</h2>
                         <div className="mt-8 grid gap-x-6 gap-y-9 sm:grid-cols-2">
                             {detail.screenshots.slice(1).map((screenshot) => (
@@ -160,8 +160,8 @@ export default function ProjectDetail({ project }) {
                             <h2 className="mt-2 text-2xl font-semibold">See the running platform and implementation</h2>
                         </div>
                         <div className="flex flex-wrap gap-4">
-                            <a href={project.demoLink} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center rounded-full bg-[var(--food-green)] px-5 text-sm font-semibold text-white hover:bg-[var(--food-green-dark)]">Live demo ↗</a>
-                            <a href={project.repositoryLink} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center rounded-full border border-[var(--food-line)] bg-white px-5 text-sm font-semibold text-[var(--food-ink)] hover:border-[var(--food-green)]">GitHub ↗</a>
+                            <a href={project.demoLink} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center rounded-full bg-[var(--sexy-catchy-color)] px-5 text-sm font-semibold text-white hover:bg-[var(--sexy-catchy-color-dark)]">Live demo ↗</a>
+                            <a href={project.repositoryLink} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center rounded-full border border-[var(--food-line)] bg-white px-5 text-sm font-semibold text-[var(--food-ink)] hover:border-[var(--sexy-catchy-color)]">GitHub ↗</a>
                         </div>
                     </div>
                 </section>
